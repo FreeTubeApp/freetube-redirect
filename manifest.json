@@ -1,0 +1,18 @@
+{
+
+  "manifest_version": 2,
+  "name": "Freetube Redirect",
+  "version": "0.1",
+
+  "description": "Redirects YouTube links to FreeTube.",
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["redirect.js"]
+  }]
+
+}
