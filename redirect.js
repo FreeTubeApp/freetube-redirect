@@ -8,7 +8,7 @@ function checkUrl(e) {
     return;
 
   // Redirect the user to FreeTube
-  if (target.href.includes('youtube') || target.href.includes('youtu.be') || target.href.includes('hooktube')){
+  if (target.href.includes('youtube.com') || target.href.includes('youtu.be') || target.href.includes('hooktube.com')){
     window.stop();
     e.stopImmediatePropagation();
     e.preventDefault();
