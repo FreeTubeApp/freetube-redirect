@@ -3,4 +3,6 @@ FreeTube-Redirect is a Chrome / Firefox extension that allows you to open up You
 
 FreeTube must be installed for the extension to work.  More information can be found at the [FreeTube Wiki](https://github.com/FreeTubeApp/FreeTube/wiki/Browser-Extension)
 
-Download Links will be located here when the extension is on the app store for each browser.
+[Download for Firefox](https://addons.mozilla.org/en-US/firefox/addon/freetube-redirect/)
+
+[Instructrions for Google Chrome](https://github.com/FreeTubeApp/FreeTube/wiki/Browser-Extension)
