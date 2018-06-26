@@ -9,6 +9,13 @@ browser.webRequest.onBeforeRequest.addListener((details) => {
 	address.href = "freetube://" + encodeURI(address.href);
 	console.log(address.href);
 
+	// Close the tab in which the link would get opened after 500ms.
+	if (details.tabId !== -1) {
+		setTimeout((tab) => {
+			browser.tabs.remove(tab);
+		}, 500, details.tabId);
+	}
+
 	return {
 		redirectUrl: address.href
 	};
