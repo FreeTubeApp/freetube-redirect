@@ -1,13 +1,11 @@
 browser.webRequest.onBeforeRequest.addListener((details) => {
 	const address = new URL(details.url);
-	console.log(address.href);
 
 	if (address.hostname.endsWith("youtube-nocookie.com")) {
 		address.hostname = "www.youtube.com";
 	}
 
 	address.href = "freetube://" + encodeURI(address.href);
-	console.log(address.href);
 
 	// Close the tab in which the link would get opened after 500ms.
 	if (details.tabId !== -1) {
