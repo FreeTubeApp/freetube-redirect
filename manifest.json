@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Freetube Redirect",
-  "version": "0.1",
+  "version": "0.2",
 
   "description": "Redirects YouTube links to FreeTube.",
 
@@ -10,9 +10,19 @@
     "48": "icons/iconColor.png"
   },
 
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["redirect.js"]
-  }]
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.youtube.com/*",
+    "*://*.youtube-nocookie.com/*",
+    "*://*.youtu.be/*",
+    "*://*.hooktube.com/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
 
 }
